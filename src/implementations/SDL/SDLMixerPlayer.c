@@ -1,7 +1,12 @@
+#pragma comment(lib, "libSDL2.so")
+#pragma comment(lib, "libSDL2.so")
+
 #include <audioPlayer.h>
 
+#include <SDL.h>
 
 audioPlayerError player_init() {
+    SDL_Init(SDL_INIT_AUDIO);
     return AP_NO_ERROR;
 }
 
@@ -33,5 +38,6 @@ audioPlayerError player_freeFile() {
 }
 
 audioPlayerError player_quit() {
+    SDL_Quit();
     return AP_NO_ERROR;
 }

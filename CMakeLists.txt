@@ -7,6 +7,10 @@ include(docs/docs.cmake)
 
 include(depends/sds.cmake)
 
-add_executable(XiMusic src/main.c src/audioPlayer.h src/audioEffect.h src/implementations/SDL/SDLMixerPlayer.c src/implementations/defaultEffectEngine.c)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+add_executable(XiMusic src/main.c src/audioPlayer.h src/audioEffect.h)
 target_include_directories(XiMusic PRIVATE src)
 target_link_libraries(XiMusic PRIVATE sds-lib)
+
+include(implementation-handler.cmake)

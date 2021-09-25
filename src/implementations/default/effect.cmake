@@ -1,0 +1,1 @@
+target_sources(XiMusic PRIVATE ${CMAKE_CURRENT_LIST_DIR}/defaultEffectEngine.c)
