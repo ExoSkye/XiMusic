@@ -36,7 +36,7 @@ typedef enum audioType {
  * Struct which is used to hold a chunk of audio - used for communication with the audio effect engine.
  */
 typedef struct AudioChunk {
-    uint8_t* buffer; /// Pointer to the start of the chunk in memory.
+    float* buffer; /// Pointer to the start of the chunk in memory.
     uint32_t length; /// Length of the buffer.
 } AudioChunk;
 
