@@ -1,12 +1,12 @@
-#pragma comment(lib, "libSDL2.so")
-#pragma comment(lib, "libSDL2.so")
-
 #include <audioPlayer.h>
-
+#include <stdio.h>
 #include <SDL.h>
 
 audioPlayerError player_init() {
-    SDL_Init(SDL_INIT_AUDIO);
+    if (SDL_Init(SDL_INIT_AUDIO) != 0) {
+        printf("Couldn't init SDL_Audio, error: %s", SDL_GetError());
+        return AP_INIT_FAILED;
+    }
     return AP_NO_ERROR;
 }
 
