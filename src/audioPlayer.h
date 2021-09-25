@@ -65,9 +65,10 @@ audioPlayerError player_seek(int offset, int direction);
 
 /**
  * Gets the current chunk.
+ * @param length The length of the chunk that this function should recieve.
  * @return An audioPlayerError value.
  */
-AudioChunk player_getChunk();
+AudioChunk player_getChunk(int length);
 
 /**
  * Plays the provided chunk.

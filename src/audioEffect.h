@@ -71,6 +71,12 @@ typedef struct audioEffect {
 audioEffectErrors effect_init();
 
 /**
+ * This function gets the optimum chunk size, this is then used to optimize the throughput of the effects.
+ * @return The optimum chunk size.
+ */
+int effect_getOptimumChunkSize();
+
+/**
  * Add the effect to the list.
  * @param effect
  * @return An audioEffectErrors value.
