@@ -11,4 +11,8 @@ foreach(impl ${impls})
     if(USE_${impl_name}_EFFECT)
         include(${impl}/effect.cmake)
     endif()
+
+    if(USE_${impl_name}_PARSER)
+        include(${impl}/parser.cmake)
+    endif()
 endforeach()

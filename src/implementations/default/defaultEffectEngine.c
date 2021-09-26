@@ -5,7 +5,7 @@ audioEffectErrors effect_init() {
 }
 
 int effect_getOptimumChunkSize() {
-    return 0;
+    return 256;
 }
 
 audioEffectErrors effect_addEffect(audioEffect effect) {
@@ -31,15 +31,15 @@ audioEffectErrors effect_deleteEffectByPointer(audioEffect* effect) {
 }
 
 audioEffectErrors effect_runEffects(AudioChunk* chunk) {
-    return AE_CANT_RUN;
+    return AE_NO_ERROR;
 }
 
 audioEffectErrors effect_runEffectByIndex(AudioChunk* chunk, int index) {
-    return AE_CANT_RUN;
+    return AE_NO_ERROR;
 }
 
 audioEffectErrors effect_runEffectByPointer(AudioChunk* chunk, audioEffect* effect) {
-    return AE_CANT_RUN;
+    return AE_NO_ERROR;
 }
 
 audioEffectErrors effect_quit() {

@@ -15,7 +15,9 @@ typedef enum audioEffectTypes {
     /// Treble value
     AET_TREBLE,
     /// 31 band equalizer (can be simplified by ui)
-    AET_EQUALIZER
+    AET_EQUALIZER,
+    /// Length value
+    AET_LEN
 } audioEffectTypes;
 
 /// The errors that an audioEffect operation can return.
@@ -27,7 +29,9 @@ typedef enum audioEffectErrors {
     /// Bad chunk - chunk wasn't valid.
     AE_BAD_CHUNK,
     /// Wrong platform - the effects can't work on this platform.
-    AE_WRONG_PLATFORM
+    AE_WRONG_PLATFORM,
+    /// Length value
+    AE_LEN
 } audioEffectErrors;
 
 /// The parameters for the volume effect.

@@ -1,5 +1,6 @@
 #include "audioPlayer.h"
 #include "audioEffect.h"
+#include "audioLoader.h"
 
 /**
  * Main function
@@ -7,9 +8,39 @@
  */
 
 
-int main() {
+int main(int argc, char** argv) {
+    sds name = sdsnew("test.wav");
+
     player_init();
-    player_loadFile(sdsnew("test.wav"));
+
+    audioType supported = AT_NONE;
+    int index = 0;
+
+    do {
+        supported = loader_getSupportedFormat(index);
+
+        switch (supported) {
+            case AT_WAV:
+                printf("WAV is supported.\n");
+                break;
+            case AT_FLAC:
+                printf("FLAC is supported.\n");
+                break;
+            case AT_MP3:
+                printf("MP3 is supported.\n");
+                break;
+            default:
+                if (supported != AT_NONE) {
+                    printf("Format %i is supported.\n", supported);
+                }
+                break;
+        }
+
+        index++;
+    }
+    while (supported != AT_NONE);
+
+    loader_loadFile(name);
 
     effect_init();
 
@@ -22,13 +53,16 @@ int main() {
     AudioChunk chunk;
 
     do {
-        chunk = player_getChunk(optimumChuckSize);
+        chunk = loader_getChunk(optimumChuckSize);
         effect_runEffects(&chunk);
         player_playChunk(chunk);
     }
-    while (player_seek(optimumChuckSize,1) != AP_CANT_SEEK);
+    while (loader_seek(1,1) != AL_COULDNT_SEEK);
 
+    loader_freeFile();
+    loader_quit();
     effect_quit();
-    player_freeFile();
     player_quit();
+
+    sdsfree(name);
 }
