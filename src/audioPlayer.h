@@ -18,14 +18,10 @@ typedef enum audioPlayerError {
 } audioPlayerError;
 
 /**
- * Describes possible audio formats that a player can play, see player_getSupportedFormat()
- */
-
-/**
  * Struct which is used to hold a chunk of audio - used for communication with the audio effect engine.
  */
 typedef struct AudioChunk {
-    uint8_t* buffer; /// Pointer to the start of the chunk in memory.
+    float* buffer; /// Pointer to the start of the chunk in memory.
     uint32_t length; /// Length of the buffer.
 } AudioChunk;
 
@@ -33,7 +29,7 @@ typedef struct AudioChunk {
  * Initializes the player.
  * @return An audioPlayerError value.
  */
-audioPlayerError player_init();
+audioPlayerError player_init(int rate, int channels);
 
 /**
  * Plays the provided chunk.

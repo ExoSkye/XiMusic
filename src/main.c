@@ -11,8 +11,6 @@
 int main(int argc, char** argv) {
     sds name = sdsnew("test.wav");
 
-    player_init();
-
     audioType supported = AT_NONE;
     int index = 0;
 
@@ -42,6 +40,11 @@ int main(int argc, char** argv) {
 
     loader_loadFile(name);
 
+    int rate = loader_getRate();
+    int channels = loader_getChannels();
+
+    player_init(rate, channels);
+
     effect_init();
 
     audioEffectParams params;
@@ -49,15 +52,15 @@ int main(int argc, char** argv) {
     audioEffect effect = {AET_VOLUME, params};
     effect_addEffect(effect);
 
-    int optimumChuckSize = effect_getOptimumChunkSize();
+    int optimumChuckSize = 192000;
     AudioChunk chunk;
 
     do {
-        chunk = loader_getChunk(optimumChuckSize);
+        loader_getChunk(optimumChuckSize, &chunk);
         effect_runEffects(&chunk);
         player_playChunk(chunk);
     }
-    while (loader_seek(1,1) != AL_COULDNT_SEEK);
+    while (loader_seek(optimumChuckSize,1) != AL_COULDNT_SEEK);
 
     loader_freeFile();
     loader_quit();

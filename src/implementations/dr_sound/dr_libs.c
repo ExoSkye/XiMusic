@@ -9,8 +9,11 @@
 
 float* data = NULL;
 size_t length = 0;
+size_t numFrames = 0;
 uint32_t divisor = 0;
 uint32_t cur_chunk = 0;
+int rate = 0;
+int channels = 0;
 audioType cur_filetype = AT_NONE;
 
 loaderError p_loadFlac(sds name) {
@@ -23,6 +26,8 @@ loaderError p_loadFlac(sds name) {
 
     length = ((size_t)flac->totalPCMFrameCount * flac->channels * sizeof(float));
 
+    numFrames = flac->totalPCMFrameCount;
+
     do {
         count++;
         divisor++;
@@ -34,6 +39,9 @@ loaderError p_loadFlac(sds name) {
     while (data == NULL);
 
     drflac_read_pcm_frames_f32(flac, flac->totalPCMFrameCount/divisor, data);
+
+    rate = flac->sampleRate;
+    channels = flac->channels;
 
     return AL_NO_ERROR;
 }
@@ -48,6 +56,8 @@ loaderError p_loadWav(sds name) {
 
     length = ((size_t)wav.totalPCMFrameCount * wav.channels * sizeof(float));
 
+    numFrames = wav.totalPCMFrameCount;
+
     do {
         count++;
         divisor++;
@@ -59,6 +69,9 @@ loaderError p_loadWav(sds name) {
     while (data == NULL);
 
     drwav_read_pcm_frames_f32(&wav, wav.totalPCMFrameCount/divisor, data);
+
+    rate = wav.sampleRate;
+    channels = wav.channels;
 
     return AL_NO_ERROR;
 }
@@ -74,6 +87,8 @@ loaderError p_loadMp3(sds name) {
 
     length = (drmp3_get_pcm_frame_count(&mp3) * mp3.channels * sizeof(float));
 
+    numFrames = drmp3_get_pcm_frame_count(&mp3);
+
     do {
         count++;
         divisor++;
@@ -85,6 +100,9 @@ loaderError p_loadMp3(sds name) {
     while (data == NULL);
 
     drmp3_read_pcm_frames_f32(&mp3, drmp3_get_pcm_frame_count(&mp3)/divisor, data);
+
+    rate = mp3.sampleRate;
+    channels = mp3.channels;
 
     return AL_NO_ERROR;
 }
@@ -125,7 +143,7 @@ loaderError loader_loadFile(sds name) {
 }
 
 loaderError loader_seek(int offset, int direction) {
-    if (cur_chunk + offset > length || cur_chunk - offset < 0 || offset > length) {
+    if (cur_chunk + offset > numFrames || cur_chunk - offset < 0 || offset > numFrames) {
         return AL_COULDNT_SEEK;
     }
     switch (direction) {
@@ -144,8 +162,16 @@ loaderError loader_seek(int offset, int direction) {
     return AL_NO_ERROR;
 }
 
-AudioChunk loader_getChunk(int length) {
-
+loaderError loader_getChunk(int wanted_length, AudioChunk *chunk) {
+    if (cur_chunk + wanted_length > numFrames) {
+        chunk->length = ((cur_chunk + wanted_length) - numFrames);
+        return AL_CANT_GET_CHUNK;
+    }
+    else {
+        chunk->length = wanted_length;
+    }
+    chunk->buffer = &data[cur_chunk];
+    return AL_NO_ERROR;
 }
 
 audioType loader_getSupportedFormat(int index) {
@@ -166,6 +192,15 @@ loaderError loader_freeFile() {
     return AL_NO_ERROR;
 }
 
+int loader_getRate() {
+    return rate;
+}
+
+int loader_getChannels() {
+    return channels;
+}
+
 void loader_quit() {
     free(data);
 }
+

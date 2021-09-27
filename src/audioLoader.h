@@ -22,7 +22,8 @@ typedef enum loaderError {
     AL_FILE_NOT_FOUND,
     AL_CANT_LOAD_FILE,
     AL_FILE_GONE,
-    AL_COULDNT_SEEK
+    AL_COULDNT_SEEK,
+    AL_CANT_GET_CHUNK
 } loaderError;
 
 /**
@@ -44,10 +45,10 @@ loaderError loader_seek(int offset, int direction);
 
 /**
  * Gets the current chunk.
- * @param length The length of the chunk that this function should recieve.
+ * @param wanted_length The length of the chunk that this function should recieve.
  * @return An loaderError value.
  */
-AudioChunk loader_getChunk(int length);
+loaderError loader_getChunk(int wanted_length, AudioChunk *chunk);
 
 /**
  * Gets the nth supported format.
@@ -66,3 +67,7 @@ loaderError loader_freeFile();
  * Quits the loader.
  */
 void loader_quit();
+
+int loader_getRate();
+
+int loader_getChannels();
