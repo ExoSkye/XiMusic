@@ -9,7 +9,12 @@
 
 
 int main(int argc, char** argv) {
-    sds name = sdsnew("test.wav");
+    if (argc < 2) {
+        printf("Please supply a filename");
+        return -1;
+    }
+
+    sds name = sdsnew(argv[1]);
 
     audioType supported = AT_NONE;
     int index = 0;
@@ -48,11 +53,11 @@ int main(int argc, char** argv) {
     effect_init();
 
     audioEffectParams params;
-    params.volume.volume = 0.7f;
+    params.volume.volume = 0.1f;
     audioEffect effect = {AET_VOLUME, params};
     effect_addEffect(effect);
 
-    int optimumChuckSize = 192000;
+    int optimumChuckSize = effect_getOptimumChunkSize();
     AudioChunk chunk;
 
     do {

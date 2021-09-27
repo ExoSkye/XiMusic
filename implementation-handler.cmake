@@ -6,13 +6,16 @@ foreach(impl ${impls})
 
     if(USE_${impl_name}_PLAYER)
         include(${impl}/player.cmake)
+        message("Using ${impl_name} player")
     endif()
 
     if(USE_${impl_name}_EFFECT)
         include(${impl}/effect.cmake)
+        message("Using ${impl_name} effects")
     endif()
 
     if(USE_${impl_name}_PARSER)
         include(${impl}/parser.cmake)
+        message("Using ${impl_name} for audio file parsing")
     endif()
 endforeach()

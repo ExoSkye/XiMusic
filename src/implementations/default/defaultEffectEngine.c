@@ -1,4 +1,8 @@
 #include <audioEffect.h>
+#include <malloc.h>
+
+audioEffect* effects = NULL;
+size_t effects_length = 0;
 
 audioEffectErrors effect_init() {
     return AE_NO_ERROR;
@@ -9,6 +13,15 @@ int effect_getOptimumChunkSize() {
 }
 
 audioEffectErrors effect_addEffect(audioEffect effect) {
+    if (effects_length == 0) {
+        effects = calloc(sizeof(audioEffect),1);
+        effects_length = 1;
+    }
+    else {
+        effects_length++;
+        effects = realloc(effects, effects_length);
+    }
+    effects[effects_length - 1] = effect;
     return AE_NO_ERROR;
 }
 
@@ -31,6 +44,19 @@ audioEffectErrors effect_deleteEffectByPointer(audioEffect* effect) {
 }
 
 audioEffectErrors effect_runEffects(AudioChunk* chunk) {
+    for (int i = 0; i < effects_length; i++) {
+        switch (effects[i].type) {
+            case AET_VOLUME:
+            {
+                for (int j = 0; j < chunk->length; j++) {
+                    chunk->buffer[j] *= effects[i].params.volume.volume;
+                }
+                break;
+            }
+            default:
+                break;
+        }
+    }
     return AE_NO_ERROR;
 }
 
@@ -43,5 +69,8 @@ audioEffectErrors effect_runEffectByPointer(AudioChunk* chunk, audioEffect* effe
 }
 
 audioEffectErrors effect_quit() {
+    if (effects != NULL) {
+	    free(effects);
+    }
     return AE_NO_ERROR;
 }

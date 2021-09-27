@@ -17,4 +17,5 @@ add_executable(XiMusic src/main.c src/audioPlayer.h src/audioEffect.h src/audioL
 target_include_directories(XiMusic PRIVATE src)
 target_link_libraries(XiMusic PRIVATE sds-lib)
 
+include(preset-handler.cmake)
 include(implementation-handler.cmake)

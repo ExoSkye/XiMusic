@@ -17,7 +17,7 @@ int channels = 0;
 audioType cur_filetype = AT_NONE;
 
 loaderError p_loadFlac(sds name) {
-    drflac* flac = drflac_open_file("my_song.flac", NULL);
+    drflac* flac = drflac_open_file(name, NULL);
     if (flac == NULL) {
         return AL_CANT_LOAD_FILE;
     }
