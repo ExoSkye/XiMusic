@@ -15,7 +15,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 add_executable(XiMusic src/main.c src/audioPlayer.h src/audioEffect.h src/audioLoader.h src/audioResampler.h)
 target_include_directories(XiMusic PRIVATE src)
-target_link_libraries(XiMusic PRIVATE sds-lib libfar-interface)
+target_link_libraries(XiMusic PRIVATE sds-lib)
 
 include(preset-handler.cmake)
 include(implementation-handler.cmake)
