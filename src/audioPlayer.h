@@ -21,8 +21,10 @@ typedef enum audioPlayerError {
  * Struct which is used to hold a chunk of audio - used for communication with the audio effect engine.
  */
 typedef struct AudioChunk {
-    float* buffer; /// Pointer to the start of the chunk in memory.
-    uint32_t length; /// Length of the buffer.
+    /// Pointer to the start of the chunk in memory.
+    float* buffer;
+    /// Length of the buffer.
+    uint32_t length; 
 } AudioChunk;
 
 /**
