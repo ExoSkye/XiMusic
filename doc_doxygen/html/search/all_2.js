@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['effect_5faddeffect_46',['effect_addEffect',['../audioEffect_8h.html#a2f6c25976bc4f99c2591782484124866',1,'audioEffect.h']]],
+  ['effect_5fdeleteeffectbyindex_47',['effect_deleteEffectByIndex',['../audioEffect_8h.html#a3ab9a31f31f818225143aa6fc7e1d9f6',1,'audioEffect.h']]],
+  ['effect_5fdeleteeffectbypointer_48',['effect_deleteEffectByPointer',['../audioEffect_8h.html#a0ed561633c5f99d7e912767feebcea19',1,'audioEffect.h']]],
+  ['effect_5fgeteffect_49',['effect_getEffect',['../audioEffect_8h.html#a9eebb66132f8658d64b1e4d4bc8a08cb',1,'audioEffect.h']]],
+  ['effect_5fgeteffectptr_50',['effect_getEffectPTR',['../audioEffect_8h.html#adaba172e19eb774463e9ee56e7cbb053',1,'audioEffect.h']]],
+  ['effect_5fgetoptimumchunksize_51',['effect_getOptimumChunkSize',['../audioEffect_8h.html#a37ba625d07d17b278c5c51f4eef4f50e',1,'audioEffect.h']]],
+  ['effect_5finit_52',['effect_init',['../audioEffect_8h.html#a3f60796769350ae5c8b548be8a72fbac',1,'audioEffect.h']]],
+  ['effect_5fquit_53',['effect_quit',['../audioEffect_8h.html#aa861abbd1c026f17a3318bfc8b20e7ed',1,'audioEffect.h']]],
+  ['effect_5fruneffectbyindex_54',['effect_runEffectByIndex',['../audioEffect_8h.html#a54fae1218e2399db3e14c75f2fcf7fe6',1,'audioEffect.h']]],
+  ['effect_5fruneffectbypointer_55',['effect_runEffectByPointer',['../audioEffect_8h.html#a1fd17a26db87c62fcaa457af81dfcc3f',1,'audioEffect.h']]],
+  ['effect_5fruneffects_56',['effect_runEffects',['../audioEffect_8h.html#a20ca67dafd3a041994e9fc316a24654b',1,'audioEffect.h']]],
+  ['effectbass_57',['effectBass',['../structeffectBass.html',1,'effectBass'],['../audioEffect_8h.html#a3d9dd06590ee2c368dcf1756def56bff',1,'effectBass():&#160;audioEffect.h']]],
+  ['effectequalizer_58',['effectEqualizer',['../structeffectEqualizer.html',1,'effectEqualizer'],['../audioEffect_8h.html#a7c57ee778ce9ac55be105d58d8e32b8a',1,'effectEqualizer():&#160;audioEffect.h']]],
+  ['effecttreble_59',['effectTreble',['../structeffectTreble.html',1,'effectTreble'],['../audioEffect_8h.html#a157c9894c3cc842b1754ade79d62a716',1,'effectTreble():&#160;audioEffect.h']]],
+  ['effectvolume_60',['effectVolume',['../structeffectVolume.html',1,'effectVolume'],['../audioEffect_8h.html#a0f6b6291085bb8ca566fc1d9346605fc',1,'effectVolume():&#160;audioEffect.h']]],
+  ['equalizer_61',['equalizer',['../unionaudioEffectParams.html#ae69f295e2a84c586c421bb7c52403829',1,'audioEffectParams']]]
+];

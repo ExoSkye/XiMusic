@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/sds-populate"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/sds-populate.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/sds-populate-complete.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-build.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-configure.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-download.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-install.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-patch.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-test.rule"
+		},
+		{
+			"file" : "/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/sds-populate-prefix/src/sds-populate-stamp/sds-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sds-populate"
+		],
+		"name" : "sds-populate"
+	}
+}

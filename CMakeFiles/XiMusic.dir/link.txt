@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/XiMusic.dir/src/main.c.o -o XiMusic  libsds.a 

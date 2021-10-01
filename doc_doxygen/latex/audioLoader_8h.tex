@@ -1,0 +1,239 @@
+\hypertarget{audioLoader_8h}{}\doxysection{/home/runner/work/\+Xi\+Music/\+Xi\+Music/src/audio\+Loader.h File Reference}
+\label{audioLoader_8h}\index{/home/runner/work/XiMusic/XiMusic/src/audioLoader.h@{/home/runner/work/XiMusic/XiMusic/src/audioLoader.h}}
+{\ttfamily \#include $<$audio\+Player.\+h$>$}\newline
+{\ttfamily \#include $<$sds.\+h$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}} \mbox{\hyperlink{audioLoader_8h_a656e9aeddfcb553b5186d2f8f895d1ac}{audio\+Type}}
+\item 
+typedef enum \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_a4cb6818a3ff541ef7b98d4bb6e8ae22e}{loader\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}} \{ \newline
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baab8427d808615bee7617cc69c8f01502}{A\+T\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baa872c8f5a876dd35ef8b69575b58664c}{A\+T\+\_\+\+W\+AV}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba0785c2d6f4de15a83826a2d940954556}{A\+T\+\_\+\+M\+P3}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bae92b54b956b94b0da9a8c5ba39fc3f51}{A\+T\+\_\+\+F\+L\+AC}}, 
+\newline
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bab6e263bf576c4b94c5e6159439c6416e}{A\+T\+\_\+\+O\+GG}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bac49e574632e188568fef494053f9986b}{A\+T\+\_\+\+O\+P\+US}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba4ef9e6a3a32fbd147ee13dca92163c4b}{A\+T\+\_\+\+M\+OD}}, 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba743f3d21dc15ad0563c24da1e0110961}{A\+T\+\_\+\+M\+ID}}, 
+\newline
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba06d04d5ee11920a17ed4ec77a5cb9141}{A\+T\+\_\+\+L\+EN}}
+ \}
+\item 
+enum \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \{ \newline
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbae35755238092408e510a0f43212d081c}{A\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaf8ca7446909a5bfa755283435ee139c2}{A\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}, 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bba3eaa8907b5cf8fa10071d548f0737cc7}{A\+L\+\_\+\+C\+A\+N\+T\+\_\+\+L\+O\+A\+D\+\_\+\+F\+I\+LE}}, 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbadc3b4ceb0e364e319ba17f64fbc5cbac}{A\+L\+\_\+\+F\+I\+L\+E\+\_\+\+G\+O\+NE}}, 
+\newline
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaefce0c26921daf568a4268dbb09235df}{A\+L\+\_\+\+C\+O\+U\+L\+D\+N\+T\+\_\+\+S\+E\+EK}}, 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbade8e9af52b771acdd34955efa67294b8}{A\+L\+\_\+\+C\+A\+N\+T\+\_\+\+G\+E\+T\+\_\+\+C\+H\+U\+NK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_a2de3c73664763e358f6dd5b0463c4303}{loader\+\_\+load\+File}} (sds name)
+\item 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_acdc6b261a704436006af36cf68364796}{loader\+\_\+seek}} (int offset, int direction)
+\item 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_a48906ef85f0523d63df67fe0c810b560}{loader\+\_\+get\+Chunk}} (int wanted\+\_\+length, \mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}} $\ast$chunk)
+\item 
+\mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}} \mbox{\hyperlink{audioLoader_8h_a624938de042caf1dca87d159fc34d036}{loader\+\_\+get\+Supported\+Format}} (int index)
+\item 
+\mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_a7548b9ad9075248105360eadc9dea2a8}{loader\+\_\+free\+File}} ()
+\item 
+void \mbox{\hyperlink{audioLoader_8h_ae998929975317b8a480bfe639daf00f5}{loader\+\_\+quit}} ()
+\item 
+int \mbox{\hyperlink{audioLoader_8h_abe66232736b724c6c17abc004719c06f}{loader\+\_\+get\+Rate}} ()
+\item 
+int \mbox{\hyperlink{audioLoader_8h_a141a342a030cb85ea8877c2a7d036450}{loader\+\_\+get\+Channels}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{audioLoader_8h_a656e9aeddfcb553b5186d2f8f895d1ac}\label{audioLoader_8h_a656e9aeddfcb553b5186d2f8f895d1ac}} 
+\index{audioLoader.h@{audioLoader.h}!audioType@{audioType}}
+\index{audioType@{audioType}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{audioType}{audioType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}} \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}}}
+
+\mbox{\Hypertarget{audioLoader_8h_a4cb6818a3ff541ef7b98d4bb6e8ae22e}\label{audioLoader_8h_a4cb6818a3ff541ef7b98d4bb6e8ae22e}} 
+\index{audioLoader.h@{audioLoader.h}!loaderError@{loaderError}}
+\index{loaderError@{loaderError}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loaderError}{loaderError}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}} 
+\index{audioLoader.h@{audioLoader.h}!audioType@{audioType}}
+\index{audioType@{audioType}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{audioType}{audioType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_NONE@{AT\_NONE}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_NONE@{AT\_NONE}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baab8427d808615bee7617cc69c8f01502}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baab8427d808615bee7617cc69c8f01502}} 
+A\+T\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_WAV@{AT\_WAV}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_WAV@{AT\_WAV}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baa872c8f5a876dd35ef8b69575b58664c}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3baa872c8f5a876dd35ef8b69575b58664c}} 
+A\+T\+\_\+\+W\+AV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_MP3@{AT\_MP3}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_MP3@{AT\_MP3}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba0785c2d6f4de15a83826a2d940954556}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba0785c2d6f4de15a83826a2d940954556}} 
+A\+T\+\_\+\+M\+P3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_FLAC@{AT\_FLAC}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_FLAC@{AT\_FLAC}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bae92b54b956b94b0da9a8c5ba39fc3f51}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bae92b54b956b94b0da9a8c5ba39fc3f51}} 
+A\+T\+\_\+\+F\+L\+AC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_OGG@{AT\_OGG}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_OGG@{AT\_OGG}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bab6e263bf576c4b94c5e6159439c6416e}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bab6e263bf576c4b94c5e6159439c6416e}} 
+A\+T\+\_\+\+O\+GG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_OPUS@{AT\_OPUS}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_OPUS@{AT\_OPUS}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bac49e574632e188568fef494053f9986b}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3bac49e574632e188568fef494053f9986b}} 
+A\+T\+\_\+\+O\+P\+US&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_MOD@{AT\_MOD}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_MOD@{AT\_MOD}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba4ef9e6a3a32fbd147ee13dca92163c4b}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba4ef9e6a3a32fbd147ee13dca92163c4b}} 
+A\+T\+\_\+\+M\+OD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_MID@{AT\_MID}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_MID@{AT\_MID}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba743f3d21dc15ad0563c24da1e0110961}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba743f3d21dc15ad0563c24da1e0110961}} 
+A\+T\+\_\+\+M\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT\_LEN@{AT\_LEN}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AT\_LEN@{AT\_LEN}}}\mbox{\Hypertarget{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba06d04d5ee11920a17ed4ec77a5cb9141}\label{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3ba06d04d5ee11920a17ed4ec77a5cb9141}} 
+A\+T\+\_\+\+L\+EN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}} 
+\index{audioLoader.h@{audioLoader.h}!loaderError@{loaderError}}
+\index{loaderError@{loaderError}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loaderError}{loaderError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_NO\_ERROR@{AL\_NO\_ERROR}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_NO\_ERROR@{AL\_NO\_ERROR}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbae35755238092408e510a0f43212d081c}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbae35755238092408e510a0f43212d081c}} 
+A\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_FILE\_NOT\_FOUND@{AL\_FILE\_NOT\_FOUND}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_FILE\_NOT\_FOUND@{AL\_FILE\_NOT\_FOUND}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaf8ca7446909a5bfa755283435ee139c2}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaf8ca7446909a5bfa755283435ee139c2}} 
+A\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_CANT\_LOAD\_FILE@{AL\_CANT\_LOAD\_FILE}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_CANT\_LOAD\_FILE@{AL\_CANT\_LOAD\_FILE}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bba3eaa8907b5cf8fa10071d548f0737cc7}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bba3eaa8907b5cf8fa10071d548f0737cc7}} 
+A\+L\+\_\+\+C\+A\+N\+T\+\_\+\+L\+O\+A\+D\+\_\+\+F\+I\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_FILE\_GONE@{AL\_FILE\_GONE}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_FILE\_GONE@{AL\_FILE\_GONE}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbadc3b4ceb0e364e319ba17f64fbc5cbac}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbadc3b4ceb0e364e319ba17f64fbc5cbac}} 
+A\+L\+\_\+\+F\+I\+L\+E\+\_\+\+G\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_COULDNT\_SEEK@{AL\_COULDNT\_SEEK}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_COULDNT\_SEEK@{AL\_COULDNT\_SEEK}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaefce0c26921daf568a4268dbb09235df}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbaefce0c26921daf568a4268dbb09235df}} 
+A\+L\+\_\+\+C\+O\+U\+L\+D\+N\+T\+\_\+\+S\+E\+EK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AL\_CANT\_GET\_CHUNK@{AL\_CANT\_GET\_CHUNK}!audioLoader.h@{audioLoader.h}}\index{audioLoader.h@{audioLoader.h}!AL\_CANT\_GET\_CHUNK@{AL\_CANT\_GET\_CHUNK}}}\mbox{\Hypertarget{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbade8e9af52b771acdd34955efa67294b8}\label{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bbade8e9af52b771acdd34955efa67294b8}} 
+A\+L\+\_\+\+C\+A\+N\+T\+\_\+\+G\+E\+T\+\_\+\+C\+H\+U\+NK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{audioLoader_8h_a7548b9ad9075248105360eadc9dea2a8}\label{audioLoader_8h_a7548b9ad9075248105360eadc9dea2a8}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_freeFile@{loader\_freeFile}}
+\index{loader\_freeFile@{loader\_freeFile}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_freeFile()}{loader\_freeFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} loader\+\_\+free\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Frees the current file. \begin{DoxyReturn}{Returns}
+An loader\+Error value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioLoader_8h_a141a342a030cb85ea8877c2a7d036450}\label{audioLoader_8h_a141a342a030cb85ea8877c2a7d036450}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_getChannels@{loader\_getChannels}}
+\index{loader\_getChannels@{loader\_getChannels}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_getChannels()}{loader\_getChannels()}}
+{\footnotesize\ttfamily int loader\+\_\+get\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{audioLoader_8h_a48906ef85f0523d63df67fe0c810b560}\label{audioLoader_8h_a48906ef85f0523d63df67fe0c810b560}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_getChunk@{loader\_getChunk}}
+\index{loader\_getChunk@{loader\_getChunk}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_getChunk()}{loader\_getChunk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} loader\+\_\+get\+Chunk (\begin{DoxyParamCaption}\item[{int}]{wanted\+\_\+length,  }\item[{\mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}} $\ast$}]{chunk }\end{DoxyParamCaption})}
+
+Gets the current chunk. 
+\begin{DoxyParams}{Parameters}
+{\em wanted\+\_\+length} & The length of the chunk that this function should recieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An loader\+Error value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioLoader_8h_abe66232736b724c6c17abc004719c06f}\label{audioLoader_8h_abe66232736b724c6c17abc004719c06f}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_getRate@{loader\_getRate}}
+\index{loader\_getRate@{loader\_getRate}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_getRate()}{loader\_getRate()}}
+{\footnotesize\ttfamily int loader\+\_\+get\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{audioLoader_8h_a624938de042caf1dca87d159fc34d036}\label{audioLoader_8h_a624938de042caf1dca87d159fc34d036}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_getSupportedFormat@{loader\_getSupportedFormat}}
+\index{loader\_getSupportedFormat@{loader\_getSupportedFormat}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_getSupportedFormat()}{loader\_getSupportedFormat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioLoader_8h_a44197eb3aff0724004ae4a2ccfcdba3b}{audio\+Type}} loader\+\_\+get\+Supported\+Format (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Gets the nth supported format. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The audio\+Type (A\+T\+\_\+\+N\+O\+NE if there are no more). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioLoader_8h_a2de3c73664763e358f6dd5b0463c4303}\label{audioLoader_8h_a2de3c73664763e358f6dd5b0463c4303}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_loadFile@{loader\_loadFile}}
+\index{loader\_loadFile@{loader\_loadFile}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_loadFile()}{loader\_loadFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} loader\+\_\+load\+File (\begin{DoxyParamCaption}\item[{sds}]{name }\end{DoxyParamCaption})}
+
+Loads a file and returns. On a low memory system this may also just set the filename in the loader implementation so the file may be streamed. 
+\begin{DoxyParams}{Parameters}
+{\em name} & filename of the file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An loader\+Error value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioLoader_8h_ae998929975317b8a480bfe639daf00f5}\label{audioLoader_8h_ae998929975317b8a480bfe639daf00f5}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_quit@{loader\_quit}}
+\index{loader\_quit@{loader\_quit}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_quit()}{loader\_quit()}}
+{\footnotesize\ttfamily void loader\+\_\+quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Quits the loader. \mbox{\Hypertarget{audioLoader_8h_acdc6b261a704436006af36cf68364796}\label{audioLoader_8h_acdc6b261a704436006af36cf68364796}} 
+\index{audioLoader.h@{audioLoader.h}!loader\_seek@{loader\_seek}}
+\index{loader\_seek@{loader\_seek}!audioLoader.h@{audioLoader.h}}
+\doxysubsubsection{\texorpdfstring{loader\_seek()}{loader\_seek()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioLoader_8h_a701afb9f44fb5721fa5724b321e809bb}{loader\+Error}} loader\+\_\+seek (\begin{DoxyParamCaption}\item[{int}]{offset,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+Seek to another chunk in the file returns A\+P\+\_\+\+C\+A\+N\+T\+\_\+\+S\+E\+EK if seek is not possible (goes before the first chink or after the last chunk). 
+\begin{DoxyParams}{Parameters}
+{\em offset} & the offset (used in conjunction with direction to describe how and where to seek to). \\
+\hline
+{\em direction} & the direction (valid values are 0, 1 and -\/1, meaning from the start, forward and backwards respectively). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An loader\+Error value. 
+\end{DoxyReturn}

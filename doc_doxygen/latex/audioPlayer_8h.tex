@@ -1,0 +1,123 @@
+\hypertarget{audioPlayer_8h}{}\doxysection{/home/runner/work/\+Xi\+Music/\+Xi\+Music/src/audio\+Player.h File Reference}
+\label{audioPlayer_8h}\index{/home/runner/work/XiMusic/XiMusic/src/audioPlayer.h@{/home/runner/work/XiMusic/XiMusic/src/audioPlayer.h}}
+{\ttfamily \#include $<$sds.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \mbox{\hyperlink{audioPlayer_8h_a285ff1a3cc4c05168c51f2746869d614}{audio\+Player\+Error}}
+\item 
+typedef struct \mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}} \mbox{\hyperlink{audioPlayer_8h_a866185e828eb67795bf6e70d37487e74}{Audio\+Chunk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \{ \newline
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a9f330cabf28ceacf3c01f683870a9904}{A\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a552f6d744d3356f7c53c2f49b178ab52}{A\+P\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED}}, 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a2feb88d9a996055c4b25eab71373b4e3}{A\+P\+\_\+\+C\+A\+N\+T\+\_\+\+I\+N\+I\+T\+\_\+\+A\+U\+D\+IO}}, 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050ae38824de0cb3f1124fe280502d6870a0}{A\+P\+\_\+\+C\+A\+N\+T\+\_\+\+P\+L\+AY}}, 
+\newline
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a90f05867e745d7af512513ad7f5d018c}{A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+L\+A\+T\+F\+O\+RM}}, 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a13e23cde360959dd17f2ad6ee473e6aa}{A\+P\+\_\+\+L\+EN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \mbox{\hyperlink{audioPlayer_8h_ad346237997106b71b20e0471040cbce3}{player\+\_\+init}} (int rate, int channels)
+\item 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \mbox{\hyperlink{audioPlayer_8h_a5fa51a7fc37a7d13d053754f94fa341f}{player\+\_\+play\+Chunk}} (\mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}} chunk)
+\item 
+\mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \mbox{\hyperlink{audioPlayer_8h_aec27ac16f5ac1664f7f54d07f6589f85}{player\+\_\+quit}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{audioPlayer_8h_a866185e828eb67795bf6e70d37487e74}\label{audioPlayer_8h_a866185e828eb67795bf6e70d37487e74}} 
+\index{audioPlayer.h@{audioPlayer.h}!AudioChunk@{AudioChunk}}
+\index{AudioChunk@{AudioChunk}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{AudioChunk}{AudioChunk}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}} \mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}}}
+
+Struct which is used to hold a chunk of audio -\/ used for communication with the audio effect engine. \mbox{\Hypertarget{audioPlayer_8h_a285ff1a3cc4c05168c51f2746869d614}\label{audioPlayer_8h_a285ff1a3cc4c05168c51f2746869d614}} 
+\index{audioPlayer.h@{audioPlayer.h}!audioPlayerError@{audioPlayerError}}
+\index{audioPlayerError@{audioPlayerError}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{audioPlayerError}{audioPlayerError}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}}}
+
+Describes possible errors that can occur in the audio player. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}} 
+\index{audioPlayer.h@{audioPlayer.h}!audioPlayerError@{audioPlayerError}}
+\index{audioPlayerError@{audioPlayerError}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{audioPlayerError}{audioPlayerError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}}}
+
+Describes possible errors that can occur in the audio player. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_NO\_ERROR@{AP\_NO\_ERROR}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_NO\_ERROR@{AP\_NO\_ERROR}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a9f330cabf28ceacf3c01f683870a9904}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a9f330cabf28ceacf3c01f683870a9904}} 
+A\+P\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_INIT\_FAILED@{AP\_INIT\_FAILED}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_INIT\_FAILED@{AP\_INIT\_FAILED}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a552f6d744d3356f7c53c2f49b178ab52}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a552f6d744d3356f7c53c2f49b178ab52}} 
+A\+P\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_CANT\_INIT\_AUDIO@{AP\_CANT\_INIT\_AUDIO}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_CANT\_INIT\_AUDIO@{AP\_CANT\_INIT\_AUDIO}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a2feb88d9a996055c4b25eab71373b4e3}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a2feb88d9a996055c4b25eab71373b4e3}} 
+A\+P\+\_\+\+C\+A\+N\+T\+\_\+\+I\+N\+I\+T\+\_\+\+A\+U\+D\+IO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_CANT\_PLAY@{AP\_CANT\_PLAY}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_CANT\_PLAY@{AP\_CANT\_PLAY}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050ae38824de0cb3f1124fe280502d6870a0}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050ae38824de0cb3f1124fe280502d6870a0}} 
+A\+P\+\_\+\+C\+A\+N\+T\+\_\+\+P\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_INVALID\_PLATFORM@{AP\_INVALID\_PLATFORM}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_INVALID\_PLATFORM@{AP\_INVALID\_PLATFORM}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a90f05867e745d7af512513ad7f5d018c}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a90f05867e745d7af512513ad7f5d018c}} 
+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+L\+A\+T\+F\+O\+RM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AP\_LEN@{AP\_LEN}!audioPlayer.h@{audioPlayer.h}}\index{audioPlayer.h@{audioPlayer.h}!AP\_LEN@{AP\_LEN}}}\mbox{\Hypertarget{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a13e23cde360959dd17f2ad6ee473e6aa}\label{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050a13e23cde360959dd17f2ad6ee473e6aa}} 
+A\+P\+\_\+\+L\+EN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{audioPlayer_8h_ad346237997106b71b20e0471040cbce3}\label{audioPlayer_8h_ad346237997106b71b20e0471040cbce3}} 
+\index{audioPlayer.h@{audioPlayer.h}!player\_init@{player\_init}}
+\index{player\_init@{player\_init}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{player\_init()}{player\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} player\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{rate,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+Initializes the player. \begin{DoxyReturn}{Returns}
+An audio\+Player\+Error value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioPlayer_8h_a5fa51a7fc37a7d13d053754f94fa341f}\label{audioPlayer_8h_a5fa51a7fc37a7d13d053754f94fa341f}} 
+\index{audioPlayer.h@{audioPlayer.h}!player\_playChunk@{player\_playChunk}}
+\index{player\_playChunk@{player\_playChunk}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{player\_playChunk()}{player\_playChunk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} player\+\_\+play\+Chunk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structAudioChunk}{Audio\+Chunk}}}]{chunk }\end{DoxyParamCaption})}
+
+Plays the provided chunk. Used after the effects have been applied. 
+\begin{DoxyParams}{Parameters}
+{\em chunk} & Chunk to play. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An audio\+Player\+Error value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{audioPlayer_8h_aec27ac16f5ac1664f7f54d07f6589f85}\label{audioPlayer_8h_aec27ac16f5ac1664f7f54d07f6589f85}} 
+\index{audioPlayer.h@{audioPlayer.h}!player\_quit@{player\_quit}}
+\index{player\_quit@{player\_quit}!audioPlayer.h@{audioPlayer.h}}
+\doxysubsubsection{\texorpdfstring{player\_quit()}{player\_quit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{audioPlayer_8h_a2b0bc4853293e7ae9dd57809eb49b050}{audio\+Player\+Error}} player\+\_\+quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Quits the player. \begin{DoxyReturn}{Returns}
+An audio\+Player\+Error value. 
+\end{DoxyReturn}
