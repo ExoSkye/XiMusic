@@ -1,3 +1,0 @@
-/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/rebuild_cache.dir
-/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/edit_cache.dir
-/home/runner/work/XiMusic/XiMusic/build/_deps/sds-subbuild/CMakeFiles/sds-populate.dir

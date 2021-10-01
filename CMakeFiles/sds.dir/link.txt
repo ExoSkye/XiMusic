@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsds.a CMakeFiles/sds.dir/sds/sds.c.o
-/usr/bin/ranlib libsds.a

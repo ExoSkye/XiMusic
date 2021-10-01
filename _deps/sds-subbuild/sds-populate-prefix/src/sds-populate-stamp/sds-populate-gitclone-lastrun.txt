@@ -1,3 +1,0 @@
-repository='https://github.com/antirez/sds.git'
-module=''
-tag='origin'
