@@ -4,6 +4,19 @@ option(BUILD_DOC "Build documentation" ON)
 # check if Doxygen is installed
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
+    include(FetchContent)
+    
+    FetchContent_Declare(doxygen-awesome
+        GIT_REPOSITORY  https://github.com/jothepro/doxygen-awesome-css.git
+        GIT_TAG         v1.5.0
+    )
+    
+    FetchContent_GetProperties(doxygen-awesome)
+    if(NOT doxygen-awesome_POPULATED)
+      FetchContent_Populate(doxygen-awesome)
+    endif()
+
+    
     # set input and output files
     set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
