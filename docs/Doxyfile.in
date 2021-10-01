@@ -2639,3 +2639,5 @@ DOT_CLEANUP            = YES
 
 INPUT += @CMAKE_CURRENT_BINARY_DIR@/README.md
 USE_MDFILE_AS_MAINPAGE = @CMAKE_CURRENT_BINARY_DIR@/README.md
+GENERATE_TREEVIEW      = YES
+HTML_EXTRA_STYLESHEET  = @doxygen-awesome_SOURCE_DIR@/doxygen-awesome.css  @doxygen-awesome_SOURCE_DIR@/doxygen-awesome-sidebar-only.css
